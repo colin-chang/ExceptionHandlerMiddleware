@@ -1,21 +1,21 @@
 # ExceptionHandler
-A custom exception handler with a specify data model for asp.net core, including middleware and MVC exception filter.
+A custom exception handler with a specific data model for asp.net core, including middleware and MVC exception filter.
 
 ## What this is about? 
 Exceptions are usually divided into expected exceptions(`OperationException`) and unexpected exceptions. Expected exceptions are usually errors thrown manually by developers, such as invalid data validation, etc. Such exception messages are relatively safe and friendly and can be displayed directly to client users; Unexpected exceptions are unexpected program errors, such as logic bugs, database errors, etc. Such exception information usually contains sensitive information that requires the developer to intercept and process it and return a more user-friendly error message to the client users.
 
-We providers an exception middleware,an exception filter and an exception filter attribute that can help to handle exceptions in asp.net core web applications.
+We providers an exception middleware, an exception filter, and an exception filter attribute that can help to handle exceptions in asp.net core web applications.
 
 ## Models
 ### OperationException
-A client friendly exception type that can be used to show expected and safe information of the exception occured.
+A client-friendly exception type that can be used to show expected and safe information of the exception occurred.
 
 ### IOperationResult&lt;T&gt;
-The actual return type for web requests with exceptions. We suggested you to use this as the return type of all success requests, so whatever exceptions occured or not, client users can always get response with a same data structure. 
+The actual return type for web requests with exceptions. We suggested you use this as the return type of all success requests, so whatever exceptions occurred or not, client users can always get responses with the same data structure. 
 
 ## How to use it?
 ### UseErrorHandler
-Custom exception middleware could help to handle exceptions in middleware pipeline globally.
+Custom exception middleware could help to handle exceptions in the middleware pipeline globally.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -52,7 +52,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 ### OperationExceptionFilterAttribute
-we could use `OperationExceptionFilterAttribute` in a same way like `OperationExceptionFilter` to handle MVC framework exceptions. Plus, it can also be used on Controllers and Actions as an Attribute which allows for more detailed control of exceptions.
+we could use `OperationExceptionFilterAttribute` in the same way as `OperationExceptionFilter` to handle MVC framework exceptions. Plus, it can also be used on Controllers and Actions as an Attribute which allows for more detailed control of exceptions.
 #### global
 ```csharp
 public void ConfigureServices(IServiceCollection services)
