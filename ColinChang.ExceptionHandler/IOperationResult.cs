@@ -22,6 +22,6 @@ namespace ColinChang.ExceptionHandler
         /// <summary>
         /// response data
         /// </summary>
-        new T Data { get; set; }
+        T Data { get; set; }
     }
 }

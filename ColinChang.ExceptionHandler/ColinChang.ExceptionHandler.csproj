@@ -2,7 +2,27 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>ExceptionHandler</Title>
+        <Authors>Colin Chang</Authors>
+        <Description>a custom exception handler with specify data model for asp.net core,including middleware and mvc exception filter</Description>
+        <Copyright>https://ccstudio.org</Copyright>
+        <PackageProjectUrl>https://github.com/colin-chang/ExceptionHandler</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <RepositoryUrl>https://github.com/colin-chang/ExceptionHandler</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageTags>exception,middleware,filter,mvc</PackageTags>
+        <PackageVersion>1.0.0</PackageVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Include="..\icon.png" Pack="true" PackagePath="" />
+    </ItemGroup>
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
