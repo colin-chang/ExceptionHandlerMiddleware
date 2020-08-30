@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColinChang.ExceptionHandler", "ColinChang.ExceptionHandler\ColinChang.ExceptionHandler.csproj", "{EDD22E3E-DA36-4E2B-BE8B-A6DF6A223802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColinChang.ExceptionHandler.Sameple", "ColinChang.ExceptionHandler.Sameple\ColinChang.ExceptionHandler.Sameple.csproj", "{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDD22E3E-DA36-4E2B-BE8B-A6DF6A223802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD22E3E-DA36-4E2B-BE8B-A6DF6A223802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD22E3E-DA36-4E2B-BE8B-A6DF6A223802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD22E3E-DA36-4E2B-BE8B-A6DF6A223802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
