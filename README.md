@@ -1,2 +1,103 @@
 # ExceptionHandler
-a custom exception handler with specify data model  for asp.net core
+A custom exception handler with a specify data model for asp.net core, including middleware and MVC exception filter.
+
+## What this is about? 
+Exceptions are usually divided into expected exceptions(`OperationException`) and unexpected exceptions. Expected exceptions are usually errors thrown manually by developers, such as invalid data validation, etc. Such exception messages are relatively safe and friendly and can be displayed directly to client users; Unexpected exceptions are unexpected program errors, such as logic bugs, database errors, etc. Such exception information usually contains sensitive information that requires the developer to intercept and process it and return a more user-friendly error message to the client users.
+
+We providers an exception middleware,an exception filter and an exception filter attribute that can help to handle exceptions in asp.net core web applications.
+
+## Models
+### OperationException
+A client friendly exception type that can be used to show expected and safe information of the exception occured.
+
+### IOperationResult&lt;T&gt;
+The actual return type for web requests with exceptions. We suggested you to use this as the return type of all success requests, so whatever exceptions occured or not, client users can always get response with a same data structure. 
+
+## How to use it?
+### UseErrorHandler
+Custom exception middleware could help to handle exceptions in middleware pipeline globally.
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    // inject IOperationResult for unexpected exception
+    services.AddTransient<IOperationResult>(provider =>
+        new OperationResult<object>(null, -1, OperationException.DefaultMessage));
+
+    services.AddControllers();
+}
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    // use middleware
+    app.UseErrorHandler();
+    // app.UseErrorHandler(async (context, e) => await context.Response.WriteAsync("unexpected exception"));
+
+    app.UseRouting();
+    app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+}
+```
+
+### OperationExceptionFilter
+`OperationExceptionFilter` can be used for asp.net core MVC application to handle exceptions of the framework.
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    // inject IOperationResult for unexpected exception
+    services.AddTransient<IOperationResult>(provider =>
+        new OperationResult<object>(null, -1, OperationException.DefaultMessage));
+    // inject filter globally  
+    services.AddControllers(options => options.Filters.Add<OperationExceptionFilter>());
+}
+```
+
+### OperationExceptionFilterAttribute
+we could use `OperationExceptionFilterAttribute` in a same way like `OperationExceptionFilter` to handle MVC framework exceptions. Plus, it can also be used on Controllers and Actions as an Attribute which allows for more detailed control of exceptions.
+#### global
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    // inject IOperationResult for unexpected exception
+    services.AddTransient<IOperationResult>(provider =>
+        new OperationResult<object>(null, -1, OperationException.DefaultMessage));
+    // inject filter globally  
+    services.AddControllers(options => options.Filters.Add<OperationExceptionFilterAttribute>());
+}
+```
+#### Controller/Action
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    // inject IOperationResult for unexpected exception
+    services.AddTransient<IOperationResult>(provider =>
+        new OperationResult<object>(null, -1, OperationException.DefaultMessage));
+    services.AddControllers();
+}
+
+[ApiController]
+[Route("[controller]")]
+public class TestController : ControllerBase
+{
+    [HttpGet("{id}")]
+    [OperationExceptionFilter]
+    public Task<IOperationResult> GetAsync(int id)
+    {
+        if (id < 0)
+            throw new OperationException("custom exception");
+
+        if (id > 0)
+            return Task.FromResult<IOperationResult>(new OperationResult<string>("success"));
+
+        throw new Exception("unexpected exception");
+    }
+}
+``` 
+
+## Sample
+[Sample](https://github.com/colin-chang/ExceptionHandler/tree/master/ColinChang.ExceptionHandler.Sameple) project shows how to use this middleware.
+
+## Nuget
+https://www.nuget.org/packages/ColinChang.ExceptionHandler/
+
+## Docs
+https://ccstudio.org/dotnet/middleware/exception.htm

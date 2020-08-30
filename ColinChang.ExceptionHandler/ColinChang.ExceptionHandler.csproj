@@ -5,7 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>ExceptionHandler</Title>
         <Authors>Colin Chang</Authors>
-        <Description>a custom exception handler with specify data model for asp.net core,including middleware and mvc exception filter</Description>
+        <Description>a custom exception handler with specific data models for asp.net core, including a middleware and an MVC exception filter.</Description>
         <Copyright>https://ccstudio.org</Copyright>
         <PackageProjectUrl>https://github.com/colin-chang/ExceptionHandler</PackageProjectUrl>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
