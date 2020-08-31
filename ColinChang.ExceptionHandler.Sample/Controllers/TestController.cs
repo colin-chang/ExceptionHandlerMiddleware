@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ColinChang.ExceptionHandler.Sameple.Controllers
+namespace ColinChang.ExceptionHandler.Sample.Controllers
 {
     [ApiController]
     [Route("[controller]")]

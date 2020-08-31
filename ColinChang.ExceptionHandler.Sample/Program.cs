@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace ColinChang.ExceptionHandler.Sameple
+namespace ColinChang.ExceptionHandler.Sample
 {
     public class Program
     {

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColinChang.ExceptionHandler", "ColinChang.ExceptionHandler\ColinChang.ExceptionHandler.csproj", "{EDD22E3E-DA36-4E2B-BE8B-A6DF6A223802}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColinChang.ExceptionHandler.Sameple", "ColinChang.ExceptionHandler.Sameple\ColinChang.ExceptionHandler.Sameple.csproj", "{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColinChang.ExceptionHandler.Sample", "ColinChang.ExceptionHandler.Sample\ColinChang.ExceptionHandler.Sample.csproj", "{F890C45E-4C0A-4C4B-8EEC-C536B30289B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColinChang.ExceptionHandler.Abstractions", "ColinChang.ExceptionHandler.Abstractions\ColinChang.ExceptionHandler.Abstractions.csproj", "{A983B7AF-6BDE-4798-B05F-2B5DF5D858BD}"
 EndProject

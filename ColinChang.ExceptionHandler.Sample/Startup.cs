@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ColinChang.ExceptionHandler.Sameple
+namespace ColinChang.ExceptionHandler.Sample
 {
     public class Startup
     {
@@ -17,7 +17,7 @@ namespace ColinChang.ExceptionHandler.Sameple
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IOperationResult>(provider =>
+            services.AddTransient<IOperationResult>(_ =>
                 new OperationResult<object>(null, -1, OperationException.DefaultMessage));
 
             services.AddControllers();
