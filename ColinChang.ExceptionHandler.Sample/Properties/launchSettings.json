@@ -1,7 +1,7 @@
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "WebDemo": {
+    "ColinChang.ExceptionHandler.Sample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "test",
