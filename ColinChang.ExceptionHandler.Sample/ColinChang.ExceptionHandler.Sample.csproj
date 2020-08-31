@@ -13,6 +13,4 @@
     <ItemGroup>
       <ProjectReference Include="..\ColinChang.ExceptionHandler\ColinChang.ExceptionHandler.csproj" />
     </ItemGroup>
-
-
 </Project>
