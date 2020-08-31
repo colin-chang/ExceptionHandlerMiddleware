@@ -1,5 +1,6 @@
 using System.Net;
 using System.Threading.Tasks;
+using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
@@ -41,7 +42,7 @@ namespace ColinChang.ExceptionHandler
 
         public override async Task OnExceptionAsync(ExceptionContext context)
         {
-            OnException(context); 
+            OnException(context);
             await Task.CompletedTask;
         }
     }

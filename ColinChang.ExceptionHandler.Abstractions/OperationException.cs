@@ -1,6 +1,6 @@
 using System;
 
-namespace ColinChang.ExceptionHandler
+namespace ColinChang.ExceptionHandler.Abstractions
 {
     public class OperationException : Exception
     {

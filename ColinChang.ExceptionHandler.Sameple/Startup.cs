@@ -1,10 +1,10 @@
+using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ColinChang.ExceptionHandler;
 
-namespace WebDemo
+namespace ColinChang.ExceptionHandler.Sameple
 {
     public class Startup
     {

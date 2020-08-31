@@ -1,4 +1,4 @@
-namespace ColinChang.ExceptionHandler
+namespace ColinChang.ExceptionHandler.Abstractions
 {
     public interface IOperationResult
     {

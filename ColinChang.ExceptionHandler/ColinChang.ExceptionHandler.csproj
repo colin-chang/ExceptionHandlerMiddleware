@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>ExceptionHandler</Title>
+        <Title>ColinChang.ExceptionHandler</Title>
         <Authors>Colin Chang</Authors>
         <Description>a custom exception handler with specific data models for asp.net core, including a middleware and an MVC exception filter.</Description>
         <Copyright>https://ccstudio.org</Copyright>
@@ -13,7 +13,8 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>exception,middleware,filter,mvc</PackageTags>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>1.0.1</PackageVersion>
+        <PackageReleaseNotes>move dependent abstractions to ColinChang.ExceptionHandler.Abstractions</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
@@ -29,6 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>

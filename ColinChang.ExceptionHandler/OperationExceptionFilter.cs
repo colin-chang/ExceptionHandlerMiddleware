@@ -1,5 +1,6 @@
 using System.Net;
 using System.Threading.Tasks;
+using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;

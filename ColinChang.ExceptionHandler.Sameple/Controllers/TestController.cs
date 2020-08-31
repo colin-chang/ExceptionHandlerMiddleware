@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ColinChang.ExceptionHandler;
+using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebDemo.Controllers
+namespace ColinChang.ExceptionHandler.Sameple.Controllers
 {
     [ApiController]
     [Route("[controller]")]
