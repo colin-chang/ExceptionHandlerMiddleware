@@ -6,7 +6,7 @@ Exceptions are usually divided into expected exceptions(`OperationException`) an
 
 We providers an exception middleware, an exception filter, and an exception filter attribute that can help to handle exceptions in asp.net core web applications.
 
-## Models
+## Abstractions
 ### OperationException
 A client-friendly exception type that can be used to show expected and safe information of the exception occurred.
 
