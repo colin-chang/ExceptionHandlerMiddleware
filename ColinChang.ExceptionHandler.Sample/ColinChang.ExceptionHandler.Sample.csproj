@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <RootNamespace>ColinChang.ExceptionHandler.Sameple</RootNamespace>
+        <RootNamespace>ColinChang.ExceptionHandler.Sample</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
