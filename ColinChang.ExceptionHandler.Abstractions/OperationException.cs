@@ -4,6 +4,8 @@ namespace ColinChang.ExceptionHandler.Abstractions
 {
     public class OperationException : Exception
     {
+        
+        
         /// <summary>
         /// default custom friendly exception message that can be seen by client users
         /// </summary>

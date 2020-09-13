@@ -33,6 +33,8 @@ namespace ColinChang.ExceptionHandler
         {
             try
             {
+                //允许Request.Body多次读取
+                context.Request.EnableBuffering();
                 await _next(context);
             }
             catch (Exception e)
