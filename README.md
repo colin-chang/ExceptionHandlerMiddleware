@@ -100,4 +100,4 @@ public class TestController : ControllerBase
 https://www.nuget.org/packages/ColinChang.ExceptionHandler/
 
 ## Docs
-https://ccstudio.org/dotnet/middleware/exception.htm
+https://ccstudio.org/dotnet/middleware/exception.html
