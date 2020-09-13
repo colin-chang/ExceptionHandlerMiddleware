@@ -13,8 +13,8 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>exception,middleware,filter,mvc</PackageTags>
-        <PackageVersion>1.0.1</PackageVersion>
-        <PackageReleaseNotes>move dependent abstractions to ColinChang.ExceptionHandler.Abstractions</PackageReleaseNotes>
+        <PackageVersion>1.0.2</PackageVersion>
+        <PackageReleaseNotes>fix a few bugs</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
