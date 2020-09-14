@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace ColinChang.ExceptionHandler
 {
@@ -43,7 +44,7 @@ namespace ColinChang.ExceptionHandler
             }
 
             _operationResult.ErrorMessage = message;
-            context.Result = new ObjectResult(JsonConvert.SerializeObject(_operationResult)) {StatusCode = (int) code};
+            context.Result = new ObjectResult(JsonConvert.SerializeObject(_operationResult,new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()})) {StatusCode = (int) code};
         }
 
         public async Task OnExceptionAsync(ExceptionContext context)

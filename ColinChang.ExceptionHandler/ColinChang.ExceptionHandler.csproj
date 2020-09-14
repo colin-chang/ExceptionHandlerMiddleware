@@ -13,7 +13,7 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>exception,middleware,filter,mvc</PackageTags>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
         <PackageReleaseNotes>set CamelCasePropertyNamesContractResolver for json serilization</PackageReleaseNotes>
     </PropertyGroup>
 
