@@ -5,6 +5,7 @@ using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace ColinChang.ExceptionHandler
 {
@@ -64,7 +65,8 @@ namespace ColinChang.ExceptionHandler
             }
 
             _operationResult.ErrorMessage = message;
-            await context.Response.WriteAsync(JsonConvert.SerializeObject(_operationResult));
+            await context.Response.WriteAsync(JsonConvert.SerializeObject(_operationResult,
+                new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()}));
         }
     }
 }

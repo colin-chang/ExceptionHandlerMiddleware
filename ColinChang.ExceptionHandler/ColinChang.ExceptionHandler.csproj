@@ -13,8 +13,8 @@
         <RepositoryType>GitHub</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>exception,middleware,filter,mvc</PackageTags>
-        <PackageVersion>1.0.2</PackageVersion>
-        <PackageReleaseNotes>fix a few bugs</PackageReleaseNotes>
+        <PackageVersion>1.0.3</PackageVersion>
+        <PackageReleaseNotes>set CamelCasePropertyNamesContractResolver for json serilization</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,16 +22,16 @@
             <Pack>True</Pack>
             <PackagePath></PackagePath>
         </None>
-        <None Include="..\icon.png" Pack="true" PackagePath="" />
+        <None Include="..\icon.png" Pack="true" PackagePath=""/>
     </ItemGroup>
 
     <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.0" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7"/>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
     </ItemGroup>
 </Project>
