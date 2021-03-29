@@ -95,7 +95,7 @@ public class TestController : ControllerBase
 ``` 
 
 ## Sample
-[Sample](https://github.com/colin-chang/ExceptionHandler/tree/master/ColinChang.ExceptionHandler.Sameple) project shows how to use this middleware.
+[Sample](https://github.com/colin-chang/ExceptionHandler/tree/main/ColinChang.ExceptionHandler.Sameple) project shows how to use this middleware.
 
 ## Nuget
 https://www.nuget.org/packages/ColinChang.ExceptionHandler/

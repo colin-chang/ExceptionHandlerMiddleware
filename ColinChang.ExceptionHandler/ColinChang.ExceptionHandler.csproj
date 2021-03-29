@@ -6,13 +6,13 @@
         <Authors>Colin Chang</Authors>
         <Description>a custom exception handler with specific data models for asp.net core, including a middleware and an MVC exception filter.</Description>
         <Copyright>https://ccstudio.com.cn</Copyright>
-        <PackageProjectUrl>https://github.com/colin-chang/ExceptionHandler</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/colin-chang/ExceptionHandlerMiddleware</PackageProjectUrl>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <RepositoryUrl>https://github.com/colin-chang/ExceptionHandler</RepositoryUrl>
+        <RepositoryUrl>https://github.com/colin-chang/ExceptionHandlerMiddleware</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>exception,middleware,filter,mvc</PackageTags>
-        <PackageVersion>1.0.5</PackageVersion>
+        <PackageVersion>1.0.6</PackageVersion>
         <PackageReleaseNotes>log request object when use default error handler</PackageReleaseNotes>
         <LangVersion>default</LangVersion>
         <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
