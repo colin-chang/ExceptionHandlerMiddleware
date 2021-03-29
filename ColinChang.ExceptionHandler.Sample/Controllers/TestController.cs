@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
+using ColinChang.ExceptionHandler;
 using ColinChang.ExceptionHandler.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +12,13 @@ namespace ColinChang.ExceptionHandler.Sample.Controllers
     [Route("[controller]")]
     public class TestController : ControllerBase
     {
+        [HttpGet]
         public Task<IOperationResult> GetAsync()
         {
-            throw new OperationException("test exception middleware");
+            if (Request.Query.Any())
+                throw new OperationException("test expected exception");
+
+            throw new InvalidOperationException("test unexpected exception");
         }
 
         [HttpGet("{code}")]

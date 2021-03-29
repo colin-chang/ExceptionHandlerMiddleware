@@ -1,4 +1,4 @@
-# ExceptionHandler
+# ErrorHandler
 A custom exception handler with a specific data model for asp.net core, including middleware and MVC exception filter.
 
 ## What this is about? 
@@ -94,10 +94,10 @@ public class TestController : ControllerBase
 ``` 
 
 ## Sample
-[Sample](https://github.com/colin-chang/ExceptionHandler/tree/master/ColinChang.ExceptionHandler.Sameple) project shows how to use this middleware.
+[Sample](https://github.com/colin-chang/ErrorHandler/tree/master/ColinChang.ErrorHandler.Sameple) project shows how to use this middleware.
 
 ## Nuget
-https://www.nuget.org/packages/ColinChang.ExceptionHandler/
+https://www.nuget.org/packages/ColinChang.ErrorHandler/
 
 ## Docs
 https://ccstudio.org/dotnet/middleware/exception.html

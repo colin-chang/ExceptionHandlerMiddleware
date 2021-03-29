@@ -6,15 +6,16 @@
         <Title>ColinChang.ExceptionHandler</Title>
         <Authors>Colin Chang</Authors>
         <Description>a custom exception handler with specific data models for asp.net core, including a middleware and an MVC exception filter.</Description>
-        <Copyright>https://ccstudio.org</Copyright>
+        <Copyright>https://ccstudio.com.cn</Copyright>
         <PackageProjectUrl>https://github.com/colin-chang/ExceptionHandler</PackageProjectUrl>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <RepositoryUrl>https://github.com/colin-chang/ExceptionHandler</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>exception,middleware,filter,mvc</PackageTags>
-        <PackageVersion>1.0.4</PackageVersion>
-        <PackageReleaseNotes>set CamelCasePropertyNamesContractResolver for json serilization</PackageReleaseNotes>
+        <PackageVersion>1.0.5</PackageVersion>
+        <PackageReleaseNotes>log request object when use default error handler</PackageReleaseNotes>
+        <LangVersion>default</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,16 +23,16 @@
             <Pack>True</Pack>
             <PackagePath></PackagePath>
         </None>
-        <None Include="..\icon.png" Pack="true" PackagePath=""/>
+        <None Include="..\icon.png" Pack="true" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.0"/>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7"/>
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
+        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 </Project>
