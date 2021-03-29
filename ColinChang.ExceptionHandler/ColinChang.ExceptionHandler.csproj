@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>ColinChang.ExceptionHandler</Title>
         <Authors>Colin Chang</Authors>
@@ -16,6 +15,7 @@
         <PackageVersion>1.0.5</PackageVersion>
         <PackageReleaseNotes>log request object when use default error handler</PackageReleaseNotes>
         <LangVersion>default</LangVersion>
+        <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
@@ -31,7 +31,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.0" />
+        <PackageReference Include="ColinChang.ExceptionHandler.Abstractions" Version="1.0.2" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>

@@ -1,4 +1,4 @@
-# ErrorHandler
+# ExceptionHandler
 A custom exception handler with a specific data model for asp.net core, including middleware and MVC exception filter.
 
 ## What this is about? 
@@ -14,25 +14,26 @@ A client-friendly exception type that can be used to show expected and safe info
 The actual return type for web requests with exceptions. We suggested you use this as the return type of all success requests, so whatever exceptions occurred or not, client users can always get responses with the same data structure. 
 
 ## How to use it?
-### UseErrorHandler
+### UseExceptionHandler
 Custom exception middleware could help to handle exceptions in the middleware pipeline globally.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    // inject IOperationResult for unexpected exception
-    services.AddTransient<IOperationResult>(provider =>
-        new OperationResult<object>(null, -1, OperationException.DefaultMessage));
-
-    services.AddControllers();
-}
-
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     // use middleware
     app.UseErrorHandler();
-    // app.UseErrorHandler(async (context, e) => await context.Response.WriteAsync("unexpected exception"));
-
+    // app.UseErrorHandler(new ErrorHandlerOptions
+    // {
+    //     LogMaxBodyLength = 1024,
+    //     OverSizeBodyLengthMessage = "request body oversize",
+    //     OperationResult = new OperationResult<int>(-1, "error occurs")
+    // });
+    // app.UseErrorHandler(async context =>
+    // {
+    //     var error = context.Features.Get<IExceptionHandlerPathFeature>().Error;
+    //     await context.Response.WriteAsync($"unexpected exception:{error.Message}");
+    // });
+    
     app.UseRouting();
     app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 }
@@ -94,10 +95,10 @@ public class TestController : ControllerBase
 ``` 
 
 ## Sample
-[Sample](https://github.com/colin-chang/ErrorHandler/tree/master/ColinChang.ErrorHandler.Sameple) project shows how to use this middleware.
+[Sample](https://github.com/colin-chang/ExceptionHandler/tree/master/ColinChang.ExceptionHandler.Sameple) project shows how to use this middleware.
 
 ## Nuget
-https://www.nuget.org/packages/ColinChang.ErrorHandler/
+https://www.nuget.org/packages/ColinChang.ExceptionHandler/
 
 ## Docs
-https://ccstudio.org/dotnet/middleware/exception.html
+https://ccstudio.com.cn/dotnet/exception/introduction.html
