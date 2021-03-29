@@ -1,4 +1,4 @@
-# ExceptionHandler
+# ExceptionHandlerMiddleware
 A custom exception handler with a specific data model for asp.net core, including middleware and MVC exception filter.
 
 ## What this is about? 
